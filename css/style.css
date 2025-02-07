@@ -1,0 +1,135 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: gray;
+}
+/* ————— Links ———————————————————— */
+a {
+  transition: 0.2s ease;
+}
+a.display {
+  font-family: "polymath", sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #1E1E1E;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+a.display.light {
+  color: #FFFFFF;
+}
+a.display svg {
+  height: 7.25px;
+  width: 0;
+  margin-left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+}
+a.display:hover svg, a.display:active svg {
+  margin-left: 8px;
+  opacity: 1;
+  height: 7.25px;
+  width: 20px;
+  visibility: visible;
+}
+a.display svg path {
+  fill: #1E1E1E;
+}
+a.display.light svg path {
+  fill: #FFFFFF;
+}
+.button-container > a.display {
+  margin-left: 10px;
+}
+/* ————— Buttons ———————————————————— */
+button, button:target {
+  height: 48px;
+  vertical-align: middle;
+  min-width: 200px;
+  padding: 0 40px;
+}
+a.button, a.button:target {
+  display: inline-flex;
+  height: 46px;
+  min-width: 118px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+button, a.button, button:target, a.button:target {
+  font-family: "polymath", sans-serif;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 48px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+  background: #FEFF86;
+  border-color: #FEFF86;
+  color: #1E1E1E;
+}
+button.secondary, a.button.secondary, button.secondary:target, a.button.secondary:target {
+  background: #8ED6CF;
+  border-color: #8ED6CF;
+}
+button.outline, a.button.outline, button.outline:target, a.button.outline:target {
+  background: transparent;
+  border-color: #1E1E1E;
+}
+button.outline.light, a.button.outline.light, button.outline.light:target, a.button.outline.light:target {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+button:focus, a.button:focus, button:-webkit-any-link:focus, a:-webkit-any-link:focus, 
+button:focus-visible, a.button:focus-visible, button:-webkit-any-link:focus-visible, a:-webkit-any-link:focus-visible, 
+button:focus-within, a.button:focus-within, button:-webkit-any-link:focus-within, a:-webkit-any-link:focus-within {
+  outline: 2px solid #F9E943;
+  outline-offset: 3px;
+}
+a:not(.button):-webkit-any-link:focus, a:not(.button):-webkit-any-link:focus-visible, a:not(.button):-webkit-any-link:focus-within {
+  outline-offset: 6px;
+}
+button.secondary:focus, a.button.secondary:focus, button.secondary:-webkit-any-link:focus, a.button.secondary:-webkit-any-link:focus, 
+button.secondary:focus-visible, a.button.secondary:focus-visible, button.secondary:-webkit-any-link:focus-visible, a.button.secondary:-webkit-any-link:focus-visible, 
+button.secondary:focus-within, a.button.secondary:focus-within, button.secondary:-webkit-any-link:focus-within, a.button.secondary:-webkit-any-link:focus-within, 
+button.outline:not(.light):focus, a.button.outline:not(.light):focus, button.outline:not(.light):-webkit-any-link:focus, a.button.outline:not(.light):-webkit-any-link:focus, 
+button.outline:not(.light):focus-visible, a.button.outline:not(.light):focus-visible, button.outline:not(.light):-webkit-any-link:focus-visible, a.button.outline:not(.light):-webkit-any-link:focus-visible, 
+button.outline:not(.light):focus-within, a.button.outline:not(.light):focus-within, button.outline:not(.light):-webkit-any-link:focus-within, a.button.outline:not(.light):-webkit-any-link:focus-within {
+  outline-color: #6EC4BC;
+}
+button:disabled, a.button.disabled, button.outline:disabled, a.button.outline.disabled {
+  opacity: 0.5;
+  border-color: #C8C8C8;
+}
+button:not(.outline):disabled, a.button:not(.outline).disabled {
+  background-color: #C8C8C8;
+}
+button:not(:disabled):active, a.button:not(.disabled):active, button:not(:disabled):hover, a.button:not(.disabled):hover {
+  transform: scale(1.05);
+}
+button:not(.outline):not(:disabled):active, a.button:not(.outline):not(.disabled):active, button:not(.outline):not(:disabled):hover, a.button:not(.outline):not(.disabled):hover {
+  background: #F9E943;
+  border-color: #F9E943;
+}
+button.secondary:not(:disabled):active, a.button.secondary:not(.disabled):active, button.secondary:not(:disabled):hover, a.button.secondary:not(.disabled):hover {
+  background: #6EC4BC;
+  border-color: #6EC4BC;
+}
+.button-container button, .button-container a.button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.button-container > *:not(:last-child) {
+  margin-right: 10px;
+}
